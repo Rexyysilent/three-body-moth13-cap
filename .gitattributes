@@ -1,0 +1,13 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.certmesh text eol=lf whitespace=-blank-at-eol
+*.log text eol=lf
+*.svg text eol=lf
+*.bin binary
+LICENSES/CC-BY-4.0.txt whitespace=-blank-at-eof

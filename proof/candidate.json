@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "status": "rigorously validated collisionless periodic orbit; apparent catalog novelty",
+  "model": {
+    "law": "planar Newtonian three-body problem",
+    "G": "1",
+    "masses": [
+      "1",
+      "1",
+      "1001/1000"
+    ],
+    "body_order": "the two unit masses are bodies 1 and 2; the central mass 1001/1000 is body 3"
+  },
+  "normalization": {
+    "positions": [
+      [
+        "-1",
+        "0"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "velocity_parameter_center": {
+      "a": "4.632255424493246161961696989282234060071831741469930094981680221404365091354e-1",
+      "b": "3.988159832923292289438092857690976537647786038697180258349617695394316511243e-1"
+    },
+    "velocities": [
+      "(a,b)",
+      "(a,b)",
+      "-(2000/1001)(a,b)"
+    ],
+    "exact_total_momentum": "0",
+    "exact_angular_momentum": "0"
+  },
+  "certified_box": {
+    "a_radius": "1e-14",
+    "b_radius": "1e-14",
+    "half_period_center": "9.695721801079469532830593565994101358608358855157701178127825277217753836265e1",
+    "half_period_radius": "1e-13",
+    "period_interval": [
+      "193.91443602158919065661187131988202717216717710315443564255",
+      "193.91443602158959065661187131988202717216717710315443564255"
+    ],
+    "shooting_node_coordinate_radius": "1e-14",
+    "dimension": 1955,
+    "segments": 244
+  },
+  "certificate": {
+    "proof_ok": true,
+    "krawczyk_max_ratio": "2.2963228020276670801661132707280868953916522656761953163276300870437756e-1",
+    "krawczyk_min_margin": "7.7036771979723329198338867292719131046083477343238046836723699129562244e-15",
+    "contraction_bound": "2.2376341547617034138856307540113144054407353975906685611530532221941598e-1",
+    "preconditioner_defect_bound": "1.1834248982235879843866016964080966776072303676785313353292394822346978e-6",
+    "maximum_center_residual_interval_magnitude": "2.5797308517600940167592298865351624158116468297072736791546046742556482e-21",
+    "squared_pair_distance_lower_bound": "0.003",
+    "pair_distance_lower_bound_statement": "d > sqrt(0.003) > 0.0547",
+    "local_uniqueness_in_box": true,
+    "local_C1_mass_family_by_implicit_function_theorem": true
+  },
+  "numerical_characterization_not_part_of_proof": {
+    "energy": "-1.3818502425450523",
+    "scale_invariant_period_T_absE_3_over_2": "314.993513098724",
+    "sampled_minimum_pair_distance": "0.0610408983",
+    "syzygy_word": "(2132123123123213)^13",
+    "class": "Moth-I^13 topological-power satellite",
+    "primitivity": "strong numerical evidence only; not interval-certified"
+  },
+  "novelty_statement": "Apparently uncatalogued unequal-mass realization at (1,1,1001/1000), after the finite catalog audit documented in proof_report.md. Neither a new topology nor unconditional priority is claimed.",
+  "artifacts": {
+    "proof_report": "proof_report.md",
+    "human_readme": "README.md",
+    "orbit_plot": "orbit_geometry.svg",
+    "final_certificate": "reproduction/logs/final_certificate.txt",
+    "mesh": "reproduction/data/mesh244.certmesh",
+    "center_enclosures": "reproduction/data/mpfi_center.log",
+    "outer_enclosures": "reproduction/data/outer_box.log"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "A computer-assisted proof of an unequal-mass Moth-I^13 periodic orbit",
+  "description": "Release artifact containing the proof report, interval enclosures, verifier source code, and reproducibility scripts. Code is Apache-2.0; documentation and research data are CC-BY-4.0 as specified in LICENSES.md. Developed with substantial assistance from OpenAI Codex using GPT-5.6 Sol (gpt-5.6-sol), credited as an AI computational contributor rather than a creator; see AUTHORSHIP.md and DISCLOSURE.md.",
+  "upload_type": "software",
+  "publication_date": "2026-08-11",
+  "creators": [
+    {
+      "name": "Rexyysilent"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "keywords": [
+    "three-body problem",
+    "periodic orbit",
+    "computer-assisted proof",
+    "interval arithmetic",
+    "rigorous numerics"
+  ]
+}

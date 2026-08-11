@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "created": "2026-08-11",
+  "result": "rigorously validated collisionless labeled periodic orbit; apparent catalog novelty",
+  "candidate": "masses (1,1,1001/1000), Moth-I^13 numerical class",
+  "proof": {
+    "dimension": 1955,
+    "segments": 244,
+    "proof_ok": true,
+    "krawczyk_max_ratio": "0.22963228020276670801661132707280868953916522656761953163276300870437756",
+    "squared_separation_threshold": "0.003",
+    "period_interval": [
+      "193.91443602158919065661187131988202717216717710315443564255",
+      "193.91443602158959065661187131988202717216717710315443564255"
+    ]
+  },
+  "claim_boundaries": {
+    "rigorous": [
+      "existence",
+      "labeled inertial periodicity",
+      "collisionlessness",
+      "local uniqueness in certified box",
+      "unquantified local C1 mass continuation"
+    ],
+    "numerical": [
+      "Moth-I^13 syzygy class",
+      "energy and scale-invariant period",
+      "minimal-period primitivity"
+    ],
+    "catalog_conditional": [
+      "apparent novelty"
+    ]
+  },
+  "files": [
+    {
+      "path": "candidate.json",
+      "bytes": 3208,
+      "sha256": "d47c56b23ad580b7c806ff6eac57663d6117caf9de397d3a09f65e595f1b212c"
+    },
+    {
+      "path": "orbit_geometry.svg",
+      "bytes": 26184,
+      "sha256": "e510fba1327c8b791371d8813de3e242d99deb822b72ffc887d2eb03e22bac88"
+    },
+    {
+      "path": "proof_report.md",
+      "bytes": 10734,
+      "sha256": "f4c5b883b8098b4c6edcb57e02b1d1b74bb4ecf9c5bb4f6ecb8372b3bc65f630"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1073,
+      "sha256": "07bee56696bfe85860f686ff17ffee5e2ed1c8e31e3d73d5e7280c935b6f6d7b"
+    },
+    {
+      "path": "report_artifact.json",
+      "bytes": 13590,
+      "sha256": "50734aa815b82085bea7398a65fd550366155a1a5d422d9d01a2ba5384fb6679"
+    },
+    {
+      "path": "reproduction/chart_map.md",
+      "bytes": 1216,
+      "sha256": "01c96b54eff42f0b52fca1f59bd02fc955b7729aa930fa0ead18ce2780b69174"
+    },
+    {
+      "path": "reproduction/data/mesh244.certmesh",
+      "bytes": 182189,
+      "sha256": "aa3c55e514a05764a9a41f3931c2d8fcb6ab309ca5d555c185593b6dfb6ffe4d"
+    },
+    {
+      "path": "reproduction/data/mpfi_center.log",
+      "bytes": 3882416,
+      "sha256": "a909e268fb290d62240eebe017f134bdfb68509f1b676cc815b48b26f36d66f7"
+    },
+    {
+      "path": "reproduction/data/outer_box.log",
+      "bytes": 1098340,
+      "sha256": "04dc3a62f3b7c1378f062804728dde7cef8aaacf1eb8cb3d2606af460d845c02"
+    },
+    {
+      "path": "reproduction/environment.txt",
+      "bytes": 454,
+      "sha256": "2e244f6c0b06cb89e465c5cc05512d698948970047b06ada542c284a46e2b7e0"
+    },
+    {
+      "path": "reproduction/logs/final_certificate.txt",
+      "bytes": 1414,
+      "sha256": "23fd9b0aee40516e50cda47388a84facae92271d866b454deca669c725c46c84"
+    },
+    {
+      "path": "reproduction/logs/quick_verify.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "reproduction/logs/quick_verify.stdout",
+      "bytes": 1435,
+      "sha256": "5521ce90968a969c0f9c5d3ad6ab76af6a0d380bbb5608a20ec1fb4a528c2384"
+    },
+    {
+      "path": "reproduction/README.md",
+      "bytes": 1260,
+      "sha256": "db975b6d0e42470e1388380ca6334336c30ad1ad6a000db0fe34f3c4c58fd2d3"
+    },
+    {
+      "path": "reproduction/scripts/assemble_logs.py",
+      "bytes": 1903,
+      "sha256": "03800944e1684f59a4493c62e50d0aa1254ac3fc3faf19ee213319e7d02d7d27"
+    },
+    {
+      "path": "reproduction/scripts/generate_jobs.py",
+      "bytes": 1653,
+      "sha256": "ea62ccc0543c59b8f7823c559bd12bbdc374b05713adf2da4d6dbbf1fd735241"
+    },
+    {
+      "path": "reproduction/scripts/rerun_all.sh",
+      "bytes": 2503,
+      "sha256": "ec838e76556ceb82ffa759d707be809b8be126a8bf68a760965c776a0921b99c"
+    },
+    {
+      "path": "reproduction/scripts/verify_existing.sh",
+      "bytes": 1674,
+      "sha256": "43f9c83e5cd2b704a8ed351f5ad4f329dfa1802a8d040ff1e86008f73890a64e"
+    },
+    {
+      "path": "reproduction/source/boost_taylor_batch_mpfi.cpp",
+      "bytes": 13737,
+      "sha256": "7da7c772a3c257d1f9a1244485d7ec933173c56623febc9a4d1804042221304d"
+    },
+    {
+      "path": "reproduction/source/boost_taylor_batch.cpp",
+      "bytes": 14208,
+      "sha256": "0e227ed047a7450a863e37d0b9876a1bb4fa14e8f7d07fea186669a4879c73b7"
+    },
+    {
+      "path": "reproduction/source/krawczyk_mpfi_terms.cpp",
+      "bytes": 8936,
+      "sha256": "ad9d795c731465b3e0312c58d4a1f60d7bdebe514e443b356af4ee188a9c99a0"
+    },
+    {
+      "path": "reproduction/source/krawczyk244.cpp",
+      "bytes": 13889,
+      "sha256": "81f932f74f3cb7c06c7314309edec6cb9594a0646c6a3b0df96084c54abafcaf"
+    },
+    {
+      "path": "reproduction/source/mpfr_ode_refine.cpp",
+      "bytes": 1933,
+      "sha256": "86538a476068761758d0cc5f3bb9eed3daa72ce667538f9d65c71ecb4566aff4"
+    },
+    {
+      "path": "reproduction/source/newton_recenter_mpfr.cpp",
+      "bytes": 5401,
+      "sha256": "a80611631c27d040987290771a25efd17d054656d1ebc1649e82ecddabd22a26"
+    }
+  ]
+}

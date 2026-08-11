@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use or verify this artifact, cite this release and its future version-specific Zenodo DOI."
+title: "A computer-assisted proof of an unequal-mass Moth-I^13 periodic orbit"
+type: software
+version: "1.0.0-rc1"
+date-released: "2026-08-11"
+abstract: "Release artifact containing a computer-assisted proof, interval enclosures, verifier source, and reproducibility scripts. Developed with substantial assistance from OpenAI Codex using GPT-5.6 Sol (gpt-5.6-sol), credited as an AI computational contributor rather than an author; see AUTHORSHIP.md and DISCLOSURE.md."
+authors:
+  - name: "Rexyysilent"
+repository-code: "https://github.com/Rexyysilent/three-body-moth13-cap"
+repository-artifact: "https://github.com/Rexyysilent/three-body-moth13-cap/releases/tag/v1.0.0-rc1"
+license: "Apache-2.0"
+keywords:
+  - three-body problem
+  - periodic orbit
+  - interval arithmetic
+  - computer-assisted proof
+  - rigorous numerics

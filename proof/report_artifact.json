@@ -1,0 +1,252 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "A rigorously validated unequal-mass Moth-I¹³ periodic orbit",
+    "generatedAt": "2026-08-11T00:00:00+05:30",
+    "description": "Technical report for a computer-assisted existence and collision-exclusion proof in the planar Newtonian three-body problem.",
+    "sources": [
+      {
+        "id": "certificate",
+        "label": "Final outward-rounded interval certificate",
+        "path": "reproduction/logs/final_certificate.txt",
+        "query": {
+          "description": "Literal SQL projection of four reviewed normalized bounds parsed from the archived certificate.",
+          "engine": "portable SQL",
+          "language": "sql",
+          "sql": "WITH certificate_values(check_name, ratio, threshold_value, certificate_field, interpretation) AS (\n  VALUES\n    ('Center correction', 0.005868864726596367, 1.0, 'MAX_CORRECTION_RATIO', 'Distance from center to Krawczyk image, normalized by box radius'),\n    ('Derivative remainder', 0.22376223205127212, 1.0, 'MAX_DERIVATIVE_RATIO', 'Derivative uncertainty contribution, normalized by box radius'),\n    ('Total contraction', 0.22376341547617034, 1.0, 'TOTAL_CONTRACTION_BOUND', 'Weighted contraction bound; strict proof requires below one'),\n    ('Krawczyk inclusion', 0.2296322802027667, 1.0, 'KRAWCZYK_MAX_RATIO', 'Largest componentwise Krawczyk image ratio; strict proof requires below one')\n)\nSELECT check_name AS check, ratio, threshold_value AS threshold, certificate_field, interpretation\nFROM certificate_values",
+          "tables_used": [
+            "reproduction/logs/final_certificate.txt"
+          ],
+          "metric_definitions": [
+            "ratio is the archived outward-rounded bound divided by its componentwise certified box radius or strict threshold, as named by certificate_field",
+            "strict inclusion and contraction require ratio < 1"
+          ]
+        }
+      },
+      {
+        "id": "candidate",
+        "label": "Machine-readable certified candidate",
+        "path": "candidate.json"
+      },
+      {
+        "id": "mesh",
+        "label": "244-segment certified shooting mesh",
+        "path": "reproduction/data/mesh244.certmesh"
+      },
+      {
+        "id": "catalog_pasj",
+        "label": "Li, Jing and Liao unequal-mass catalog",
+        "href": "https://doi.org/10.1093/pasj/psy057"
+      },
+      {
+        "id": "catalog_family",
+        "label": "One-family unequal-mass supplement",
+        "href": "https://arxiv.org/abs/2007.10184"
+      },
+      {
+        "id": "catalog_sofia",
+        "label": "Sofia equal-mass Euler catalog",
+        "href": "https://db2.fmi.uni-sofia.bg/3bodyeuler/"
+      }
+    ],
+    "charts": [
+      {
+        "id": "certificate_ratios",
+        "title": "Normalized interval-certificate bounds",
+        "subtitle": "Every plotted ratio is below the strict threshold of one; lower is better.",
+        "type": "bar",
+        "intent": "comparison",
+        "question": "How much margin remains in the strict Krawczyk and contraction tests?",
+        "rationale": "A common-scale bar chart makes the four normalized proof margins directly comparable against the same threshold.",
+        "dataset": "certificate_ratios",
+        "encodings": {
+          "x": {
+            "field": "check",
+            "type": "nominal",
+            "title": "Certificate component"
+          },
+          "y": {
+            "field": "ratio",
+            "type": "quantitative",
+            "title": "Normalized ratio"
+          }
+        },
+        "palette": {
+          "kind": "sequential",
+          "name": "blue"
+        },
+        "labels": {
+          "values": "all"
+        },
+        "referenceLines": [
+          {
+            "axis": "y",
+            "value": 1,
+            "label": "strict threshold",
+            "color": "neutral",
+            "lineStyle": "dashed"
+          }
+        ],
+        "source": {
+          "id": "certificate",
+          "label": "Final outward-rounded interval certificate",
+          "path": "reproduction/logs/final_certificate.txt",
+          "query": {
+            "description": "Literal SQL projection of four reviewed normalized bounds parsed from the archived certificate.",
+            "engine": "portable SQL",
+            "language": "sql",
+            "sql": "WITH certificate_values(check_name, ratio, threshold_value, certificate_field, interpretation) AS (\n  VALUES\n    ('Center correction', 0.005868864726596367, 1.0, 'MAX_CORRECTION_RATIO', 'Distance from center to Krawczyk image, normalized by box radius'),\n    ('Derivative remainder', 0.22376223205127212, 1.0, 'MAX_DERIVATIVE_RATIO', 'Derivative uncertainty contribution, normalized by box radius'),\n    ('Total contraction', 0.22376341547617034, 1.0, 'TOTAL_CONTRACTION_BOUND', 'Weighted contraction bound; strict proof requires below one'),\n    ('Krawczyk inclusion', 0.2296322802027667, 1.0, 'KRAWCZYK_MAX_RATIO', 'Largest componentwise Krawczyk image ratio; strict proof requires below one')\n)\nSELECT check_name AS check, ratio, threshold_value AS threshold, certificate_field, interpretation\nFROM certificate_values",
+            "tables_used": [
+              "reproduction/logs/final_certificate.txt"
+            ],
+            "metric_definitions": [
+              "ratio is the archived outward-rounded bound divided by its componentwise certified box radius or strict threshold, as named by certificate_field",
+              "strict inclusion and contraction require ratio < 1"
+            ]
+          }
+        }
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# A rigorously validated unequal-mass Moth-I¹³ periodic orbit"
+      },
+      {
+        "id": "summary",
+        "type": "markdown",
+        "body": "## Technical summary\n\nAn outward-rounded 1,955-dimensional Krawczyk calculation proves a unique half-shooting root for masses **(1, 1, 1001/1000)**. Reversibility closes it to a labeled inertial periodic orbit with period near **193.9144360215894**. Full-time interval tubes prove every squared pair distance exceeds **0.003**. The result is an apparently uncatalogued unequal-mass realization of the known Moth-I¹³ class; topology, minimal-period primitivity, and catalog priority remain qualified."
+      },
+      {
+        "id": "finding",
+        "type": "markdown",
+        "body": "## The strict interval tests retain substantial margin\n\nThe maximum normalized Krawczyk image is about **0.2296** of its box radius. Because strict inclusion requires every component to be below one, the displayed values quantify the proof margin. The archived quick verifier was rebuilt and ended with **PROOF_OK 1** and **certificate verified**."
+      },
+      {
+        "id": "chart",
+        "type": "chart",
+        "chartId": "certificate_ratios"
+      },
+      {
+        "id": "scope",
+        "type": "markdown",
+        "body": "## Exact scope and definitions\n\nThe normalized positions are q₁=(-1,0), q₂=(1,0), q₃=(0,0). Initial velocities are v₁=v₂=(a,b) and v₃=−(2000/1001)(a,b), giving exact zero total momentum and angular momentum. “Periodic” means the labeled inertial state returns after the certified T. The proof does not establish that T is minimal."
+      },
+      {
+        "id": "method",
+        "type": "markdown",
+        "body": "## Reversibility and 244-segment multiple shooting prove closure\n\nThe initial state lies in a reversing fixed set. Three certified half-return equations, together with exact angular-momentum conservation and collision clearance, put the endpoint in the same fixed set; therefore the state returns after twice the half period. The half-orbit uses 244 exact-rational time segments and 1,955 unknowns. MPFI center enclosures and Boost.Interval full-box C¹ tubes feed the final Krawczyk operator."
+      },
+      {
+        "id": "collision",
+        "type": "markdown",
+        "body": "## Collisionlessness holds over every time slab\n\nEach segment enclosure covers every state in the shooting box and every time in that slab. All three squared pair distances are interval-evaluated over those tubes. A conservative global lower bound of **0.003** applies to the first half and, by the reversing symmetry, to the full orbit."
+      },
+      {
+        "id": "family",
+        "type": "markdown",
+        "body": "## Nonsingularity gives a local C¹ mass continuation\n\nThe certified shooting derivative is nonsingular. Smooth dependence of the collision-free Newtonian flow on the central mass therefore yields a local C¹ branch near μ=1001/1000 by the implicit-function theorem. The present proof does not quantify the mass interval or certify uniform collision clearance across it."
+      },
+      {
+        "id": "limits",
+        "type": "markdown",
+        "body": "## What remains numerical or catalog-conditional\n\nThe Moth-I¹³ syzygy word, energy, sampled closest approach, and dynamical primitivity are numerical characterizations. The catalog audit excludes the main published equal- and unequal-mass collections by mass coverage or topology, but cannot rule out unpublished or inaccessible computations. The safe claim is **apparently uncatalogued**, not unconditional priority."
+      },
+      {
+        "id": "next",
+        "type": "markdown",
+        "body": "## Recommended next steps\n\n1. Interval-exclude every earlier identity return to prove minimal period.\n2. Certify the full syzygy itinerary.\n3. Continue the Krawczyk proof uniformly over an explicit mass interval.\n4. Obtain an independent rerun with a second interval ODE implementation."
+      },
+      {
+        "id": "questions",
+        "type": "markdown",
+        "body": "## Further questions\n\nWhere does the local satellite branch terminate, and can the observed 13:1 merger be certified? Is the exact Moth-I¹³ itinerary stable throughout a nontrivial rational-mass interval?"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "status": "ready",
+    "generatedAt": "2026-08-11T00:00:00+05:30",
+    "datasets": {
+      "certificate_ratios": [
+        {
+          "check": "Center correction",
+          "ratio": 0.005868864726596367,
+          "threshold": 1,
+          "certificate_field": "MAX_CORRECTION_RATIO",
+          "interpretation": "Distance from center to Krawczyk image, normalized by box radius"
+        },
+        {
+          "check": "Derivative remainder",
+          "ratio": 0.22376223205127213,
+          "threshold": 1,
+          "certificate_field": "MAX_DERIVATIVE_RATIO",
+          "interpretation": "Derivative uncertainty contribution, normalized by box radius"
+        },
+        {
+          "check": "Total contraction",
+          "ratio": 0.22376341547617035,
+          "threshold": 1,
+          "certificate_field": "TOTAL_CONTRACTION_BOUND",
+          "interpretation": "Weighted contraction bound; strict proof requires below one"
+        },
+        {
+          "check": "Krawczyk inclusion",
+          "ratio": 0.2296322802027667,
+          "threshold": 1,
+          "certificate_field": "KRAWCZYK_MAX_RATIO",
+          "interpretation": "Largest componentwise Krawczyk image ratio; strict proof requires below one"
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "certificate",
+      "label": "Final outward-rounded interval certificate",
+      "path": "reproduction/logs/final_certificate.txt",
+      "query": {
+        "description": "Literal SQL projection of four reviewed normalized bounds parsed from the archived certificate.",
+        "engine": "portable SQL",
+        "language": "sql",
+        "sql": "WITH certificate_values(check_name, ratio, threshold_value, certificate_field, interpretation) AS (\n  VALUES\n    ('Center correction', 0.005868864726596367, 1.0, 'MAX_CORRECTION_RATIO', 'Distance from center to Krawczyk image, normalized by box radius'),\n    ('Derivative remainder', 0.22376223205127212, 1.0, 'MAX_DERIVATIVE_RATIO', 'Derivative uncertainty contribution, normalized by box radius'),\n    ('Total contraction', 0.22376341547617034, 1.0, 'TOTAL_CONTRACTION_BOUND', 'Weighted contraction bound; strict proof requires below one'),\n    ('Krawczyk inclusion', 0.2296322802027667, 1.0, 'KRAWCZYK_MAX_RATIO', 'Largest componentwise Krawczyk image ratio; strict proof requires below one')\n)\nSELECT check_name AS check, ratio, threshold_value AS threshold, certificate_field, interpretation\nFROM certificate_values",
+        "tables_used": [
+          "reproduction/logs/final_certificate.txt"
+        ],
+        "metric_definitions": [
+          "ratio is the archived outward-rounded bound divided by its componentwise certified box radius or strict threshold, as named by certificate_field",
+          "strict inclusion and contraction require ratio < 1"
+        ]
+      }
+    },
+    {
+      "id": "candidate",
+      "label": "Machine-readable certified candidate",
+      "path": "candidate.json"
+    },
+    {
+      "id": "mesh",
+      "label": "244-segment certified shooting mesh",
+      "path": "reproduction/data/mesh244.certmesh"
+    },
+    {
+      "id": "catalog_pasj",
+      "label": "Li, Jing and Liao unequal-mass catalog",
+      "href": "https://doi.org/10.1093/pasj/psy057"
+    },
+    {
+      "id": "catalog_family",
+      "label": "One-family unequal-mass supplement",
+      "href": "https://arxiv.org/abs/2007.10184"
+    },
+    {
+      "id": "catalog_sofia",
+      "label": "Sofia equal-mass Euler catalog",
+      "href": "https://db2.fmi.uni-sofia.bg/3bodyeuler/"
+    }
+  ]
+}

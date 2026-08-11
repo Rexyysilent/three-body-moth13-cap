@@ -1,0 +1,50 @@
+name: Full interval regeneration
+
+on:
+  workflow_dispatch:
+    inputs:
+      jobs:
+        description: Parallel enclosure jobs
+        required: true
+        default: "4"
+
+permissions:
+  contents: read
+
+jobs:
+  full-regeneration:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - name: Check out release
+        uses: actions/checkout@v4
+
+      - name: Install interval-arithmetic dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends \
+            build-essential python3 libboost-all-dev libgmp-dev libmpfr-dev libmpfi-dev
+
+      - name: Verify frozen payload
+        run: |
+          cd proof
+          sha256sum -c checksums.sha256
+
+      - name: Regenerate every interval enclosure
+        env:
+          JOBS: ${{ inputs.jobs }}
+        run: |
+          cd proof
+          bash reproduction/scripts/rerun_all.sh
+
+      - name: Preserve full-run certificate and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-regeneration-${{ github.sha }}
+          path: |
+            proof/reproduction/run_full/certificate.txt
+            proof/reproduction/run_full/mpfi_center.log
+            proof/reproduction/run_full/outer_box.log
+            proof/reproduction/run_full/jobs/**/*.err
+          if-no-files-found: warn

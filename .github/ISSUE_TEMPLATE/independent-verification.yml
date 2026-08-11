@@ -1,0 +1,59 @@
+name: Independent verification report
+description: Report a checksum, archived-enclosure, full-regeneration, or independent-implementation result.
+title: "[verification] "
+labels:
+  - verification
+body:
+  - type: dropdown
+    id: level
+    attributes:
+      label: Verification level
+      options:
+        - Level 0 — payload checksums
+        - Level 1 — archived-enclosure certificate check
+        - Level 2 — complete enclosure regeneration
+        - Level 3 — independent implementation
+    validations:
+      required: true
+
+  - type: input
+    id: release
+    attributes:
+      label: Release tag and commit
+      placeholder: v1.0.0, commit SHA
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, architecture, compiler, Boost, GMP, MPFR, MPFI, and container digest if used.
+    validations:
+      required: true
+
+  - type: textarea
+    id: commands
+    attributes:
+      label: Commands executed
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: result
+    attributes:
+      label: Result and raw-log links
+      description: Include exit codes and whether PROOF_OK 1 was obtained. Attach complete logs when possible.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: assertions
+    attributes:
+      label: Assertions
+      options:
+        - label: I verified the release tag/commit and payload checksums stated above.
+          required: true
+        - label: I have not inferred minimal-period primitivity from the certified periodicity result.
+          required: true
