@@ -6,6 +6,7 @@
 - Add reproducible verification levels and reviewer-reporting guidance.
 - Add Ubuntu CI and a containerized quick verification route.
 - Add deterministic release-archive generation.
-- Record `Rexyysilent` as the public creator identity.
+- Record Souparna Majumder as the scholarly author and `Rexyysilent` as the
+  public project identity.
 - Apply Apache-2.0 to code and CC-BY-4.0 to documentation and research data.
 - Complete GitHub, Citation File Format, and Zenodo release metadata.

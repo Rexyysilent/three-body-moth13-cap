@@ -23,7 +23,8 @@
 ## Publication metadata
 
 - [x] Record OpenAI Codex / GPT-5.6 Sol (`gpt-5.6-sol`) as an AI computational contributor in `AUTHORSHIP.md` and `DISCLOSURE.md`.
-- [x] Record `Rexyysilent` as the approved public creator identity.
+- [x] Record Souparna Majumder as the scholarly author and `Rexyysilent` as the
+  approved public project identity.
 - [x] Apply Apache-2.0 to code and CC-BY-4.0 to documentation/data.
 - [x] Add the public repository URL.
 - [x] Complete `.zenodo.json` for the future archive.

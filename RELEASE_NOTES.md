@@ -11,7 +11,8 @@ Included:
 - technical report, catalog audit, machine-readable candidate, and orbit visualization;
 - GitHub CI, container recipe, checksums, and independent-verification protocol.
 - Apache-2.0 code and CC-BY-4.0 documentation/data licensing;
-- `Rexyysilent` creator and public repository metadata.
+- Souparna Majumder scholarly-author metadata and `Rexyysilent` public
+  repository metadata.
 - arXiv-ready LaTeX source, generated BBL, vector figure, and visually inspected PDF manuscript.
 
 Known limitations:

@@ -4,7 +4,7 @@ This directory contains the arXiv-ready source for:
 
 > A computer-assisted proof of an unequal-mass Moth-I^13 periodic orbit in the planar Newtonian three-body problem
 
-Author: **Rexyysilent**
+Author: **Souparna Majumder**
 
 ## Build
 

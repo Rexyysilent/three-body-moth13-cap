@@ -1,6 +1,6 @@
 # License map
 
-Copyright 2026 Rexyysilent.
+Copyright 2026 Souparna Majumder (public project identity: Rexyysilent).
 
 This repository uses two licenses because it contains both executable software
 and a scientific proof/data artifact.
