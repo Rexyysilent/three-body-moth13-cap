@@ -36,7 +36,7 @@
 
 ## Manuscript
 
-- [ ] Convert `proof/proof_report.md` into reviewed LaTeX/PDF.
+- [x] Convert `proof/proof_report.md` into reviewed LaTeX/PDF and verify a clean source-bundle rebuild.
 - [x] Add a release-level AI/tool-use contribution record and disclosure draft.
 - [ ] Adapt the disclosure and authorship statement to the target venue's current policy.
 - [ ] Have a domain expert check the reversibility argument and novelty wording.

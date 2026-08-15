@@ -33,6 +33,13 @@ required=(
   "$PROOF/proof_report.md"
   "$PROOF/checksums.sha256"
   "$PROOF/reproduction/logs/final_certificate.txt"
+  "$ROOT/manuscript/main.tex"
+  "$ROOT/manuscript/references.bib"
+  "$ROOT/manuscript/main.bbl"
+  "$ROOT/manuscript/main.pdf"
+  "$ROOT/manuscript/orbit_geometry.pdf"
+  "$ROOT/manuscript/README.md"
+  "$ROOT/manuscript/arxiv-metadata.md"
 )
 
 for path in "${required[@]}"; do

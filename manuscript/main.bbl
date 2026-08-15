@@ -1,0 +1,64 @@
+\begin{thebibliography}{10}
+
+\bibitem{hudomal-2018}
+V.~Dmitra{\v{s}}inovi{\'c}, Ana Hudomal, Mitsuru Shibayama, and Ayumu Sugita.
+\newblock Linear stability of periodic three-body orbits with zero angular
+  momentum and topological dependence of kepler's third law: a numerical test.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  51(31):315101, 2018.
+
+\bibitem{hristov-2025}
+Ivan Hristov, Radoslava Hristova, and Kiyotaka Tanikawa.
+\newblock An extensive search for stable periodic orbits of the equal-mass zero
+  angular momentum three-body problem, 2025.
+
+\bibitem{capd-2020}
+Tomasz Kapela, Marian Mrozek, Daniel Wilczak, and Piotr Zgliczy{\'n}ski.
+\newblock {CAPD::DynSys}: a flexible {C++} toolbox for rigorous numerical
+  analysis of dynamical systems.
+\newblock {\em Communications in Nonlinear Science and Numerical Simulation},
+  101:105578, 2021.
+
+\bibitem{kapela-simo-2007}
+Tomasz Kapela and Carles Sim\'o.
+\newblock Computer assisted proofs for non-symmetric planar choreographies and
+  for stability of the eight.
+\newblock {\em Nonlinearity}, 20(5):1241--1255, 2007.
+
+\bibitem{kapela-zgliczynski-2003}
+Tomasz Kapela and Piotr Zgliczy{\'n}ski.
+\newblock An existence of simple choreographies for {N}-body problem - a
+  computer assisted proof.
+\newblock {\em Nonlinearity}, 16(6):1899--1918, 2003.
+
+\bibitem{krawczyk-1969}
+Rudolf Krawczyk.
+\newblock Newton-algorithmen zur bestimmung von nullstellen mit
+  fehlerschranken.
+\newblock {\em Computing}, 4:187--201, 1969.
+
+\bibitem{li-jing-liao-2018}
+Xiaoming Li, Yipeng Jing, and Shijun Liao.
+\newblock The 1223 new periodic orbits of planar three-body problem with
+  unequal mass and zero angular momentum.
+\newblock {\em Publications of the Astronomical Society of Japan}, 70(4):64,
+  2018.
+
+\bibitem{li-li-liao-2021}
+Xiaoming Li, Xiaochen Li, and Shijun Liao.
+\newblock One family of 13315 stable periodic orbits of the non-hierarchical
+  unequal-mass triple system.
+\newblock {\em Science China Physics, Mechanics \& Astronomy}, 64:219511, 2021.
+
+\bibitem{moeckel-montgomery-2015}
+Richard Moeckel and Richard Montgomery.
+\newblock Realizing all reduced syzygy sequences in the planar three-body
+  problem.
+\newblock {\em Nonlinearity}, 28(6):1919--1935, 2015.
+
+\bibitem{suvakov-dmitrasinovic-2013}
+Milovan {\v{S}}uvakov and V.~Dmitra{\v{s}}inovi{\'c}.
+\newblock Three classes of newtonian three-body planar periodic orbits.
+\newblock {\em Physical Review Letters}, 110:114301, 2013.
+
+\end{thebibliography}
