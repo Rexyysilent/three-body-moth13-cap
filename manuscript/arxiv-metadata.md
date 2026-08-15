@@ -6,7 +6,7 @@ A computer-assisted proof of an unequal-mass Moth-I^13 periodic orbit in the pla
 
 ## Author
 
-Rexyysilent
+Souparna Majumder
 
 ## Suggested categories
 

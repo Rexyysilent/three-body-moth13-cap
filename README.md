@@ -83,7 +83,9 @@ interval theorem.
 
 OpenAI Codex / GPT-5.6 Sol (`gpt-5.6-sol`) is recorded as an AI computational
 contributor, not as the scholarly or legal author. `Rexyysilent` is the approved
-public creator identity. This release candidate is public for independent
+GitHub account and public project identity; **Souparna Majumder** is the
+accountable scholarly author and release creator. This release candidate is
+public for independent
 verification; it is not yet the final `v1.0.0`/Zenodo record.
 
 ## Licensing

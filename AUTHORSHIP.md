@@ -2,10 +2,12 @@
 
 ## Accountable author
 
-The public creator identity for this release is **Rexyysilent**, as explicitly
-supplied and approved by the repository owner. This identity appears in
-`CITATION.cff` and `.zenodo.json` and is responsible for the decision to publish
-the artifact.
+The accountable scholarly author and release creator is **Souparna Majumder**.
+The GitHub account and public project identity remain **Rexyysilent**, as
+explicitly supplied and approved by the repository owner. The scholarly name
+appears in `CITATION.cff`, `.zenodo.json`, and the manuscript; repository URLs
+retain the GitHub account name. Souparna Majumder is responsible for the
+decision to publish the artifact.
 
 ## AI computational contributor
 
