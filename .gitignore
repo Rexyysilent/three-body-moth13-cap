@@ -5,3 +5,7 @@ release-check.log
 *.zip.sha256
 __pycache__/
 *.pyc
+manuscript/*.aux
+manuscript/*.blg
+manuscript/*.log
+manuscript/*.out

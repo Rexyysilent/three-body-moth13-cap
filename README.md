@@ -47,11 +47,30 @@ docker build -t three-body-moth13-cap:rc1 .
 docker run --rm three-body-moth13-cap:rc1
 ```
 
+## Manuscript
+
+The `manuscript/` directory contains the reviewed LaTeX source, generated BBL,
+vector figure, and compiled PDF for the research-facing paper. The prepared
+arXiv bundle consists of:
+
+```text
+main.tex
+references.bib
+main.bbl
+orbit_geometry.pdf
+```
+
+The manuscript proves existence, collisionlessness, and local uniqueness, and
+states the unquantified local C1 mass-family consequence. It keeps the syzygy
+word, minimal-period primitivity, and catalog novelty explicitly outside the
+interval theorem.
+
 ## Contents
 
 - `proof/`: frozen scientific payload and its original SHA-256 manifest.
 - `proof/proof_report.md`: technical proof report.
 - `proof/reproduction/`: C++ sources, interval data, logs, and rerun scripts.
+- `manuscript/`: arXiv-ready TeX source, bibliography, figure, PDF, and metadata.
 - `AUTHORSHIP.md`: accountable-authorship requirement and AI contribution record.
 - `DISCLOSURE.md`: draft computational/tool-use disclosure.
 - `CITATION.cff`: citation metadata for GitHub and Zenodo.
